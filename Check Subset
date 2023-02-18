@@ -1,0 +1,9 @@
+superset_a =  set(map(int, input().split()))
+N = int(input())
+for i in range(N):
+        sub_set = set(map(int, input().split()))
+        if len(superset_a) == len(sub_set) or not superset_a.issuperset(sub_set):
+            print(False)
+            break
+        elif i == N-1:
+            print (True)
