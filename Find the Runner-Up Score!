@@ -1,0 +1,9 @@
+n = int(input())
+#arr =input()
+arr = list(map(int, input().split()))
+l=min(arr)
+h=max(arr)
+for i in range(len(arr)):
+    if arr[i]>l and arr[i]<h:
+        l=arr[i]
+print(l)
