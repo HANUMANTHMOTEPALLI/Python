@@ -1,0 +1,17 @@
+row,clm=input().split()
+row=int(row)
+clm=int(clm)
+size=int(clm/2)-1
+rpt=int(row/2)
+mid=int((clm-7)/2)
+n=1
+for i in range(rpt):
+    print('-'*(size-(i*3))+'.|.'*n+'-'*(size-(i*3)))
+    n+=2
+print('-'*mid+'WELCOME'+'-'*mid)
+k=1
+l=0
+for j in range(rpt):
+    print('-'*(k*3)+'.|.'*((row-2)-l)+'-'*(k*3))
+    k+=1
+    l+=2
