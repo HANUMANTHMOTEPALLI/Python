@@ -1,0 +1,13 @@
+from itertools import permutations
+a,b=input().split()
+b=int(b)
+li=list(permutations(a,b))
+n=[]
+for i in range(len(li)):
+    m=''
+    for j in range(len(li[i])):
+        m+=li[i][j]
+    n.append(m)
+n=sorted(n)
+for i in n:
+    print(i)
