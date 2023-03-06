@@ -1,0 +1,10 @@
+def solve(s):
+    c= ""
+    for i in range(0,len(s)):
+        if i == 0:
+            c = c + (s[i].upper())
+        elif s[i-1] == " ":
+            c = c + (s[i].upper())
+        else:
+            c = c + s[i]
+    return c
