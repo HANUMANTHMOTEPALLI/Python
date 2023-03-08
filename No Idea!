@@ -1,0 +1,23 @@
+n,m=input().split()
+ar=list(map(int,input().split()))
+a=set(map(int,input().split()))
+b=set(map(int,input().split()))
+count=0
+for i in ar:
+    if i in a:
+        count+=1
+    if i in b:
+        count-=1
+print(count)
+
+
+"""
+
+n, m = map(int, input().split())
+ar = set(map(int, input().split()))
+a = set(map(int, input().split()))
+b = set(map(int, input().split()))
+count = len(ar.intersection(a)) - len(ar.intersection(b))
+print(count)
+
+"""
