@@ -1,0 +1,41 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+d={}
+for i in range(int(input())):
+    n=input()
+    if n not in d:
+        d[n]=1
+    elif n in d:
+        d[n]+=1
+    
+print(len(d))
+print(*d.values())
+    
+"""d={}
+for i in range(int(input())):
+    n=input()
+    if n not in d.keys():
+        d[n]=1
+    elif n in d.keys():
+        d[n]+=1
+    
+print(len(d))
+print(*d.values())"""
+    
+
+
+"""w=[]
+for i in range(int(input())):
+    w.append(input())
+set_words=[]
+for l in w:
+    if l not in set_words:
+        set_words.append(l)
+l=len(set(w))
+print(l)
+for j in set_words:
+    count=0
+    for k in w:
+        if j==k:
+            count+=1
+    print(count,end=" ")"""
+            
