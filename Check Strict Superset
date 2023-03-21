@@ -1,0 +1,13 @@
+a=set(list(map(int,input().split())))
+n=int(input())
+n_list=[]
+for i in range(n):
+    n_list.append(set(list(map(int,input().split()))))
+k=[]
+for i in n_list:
+    l=a-i
+    if i.issubset(a) and len(l)>=1:
+        k.append(True)
+    else:
+        k.append(False)
+print(all(k))
