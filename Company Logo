@@ -1,0 +1,34 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+s=input()
+a={}
+for i in s:
+    if i not in a:
+        a[i]=1
+    else:
+        a[i]+=1
+count_list=list(a.values())
+count_list.sort(reverse=True)
+b={}
+for i in count_list[:3]:
+    for j,k in a.items():
+        if i==k and j not in b:
+            b[j]=k
+b_list=list(b.items())
+ba_list=sorted(b_list,key=lambda x:x[0],reverse=False)
+m=[]
+for i in count_list[:3]:
+    for j in ba_list:
+        if j[1]==i:
+            m.append([j[0],i])
+k=[]
+for i in m:
+    if i not in k:
+        k.append(i)
+for i in range(3):
+    print(k[i][0],k[i][1])
