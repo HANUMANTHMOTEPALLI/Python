@@ -1,0 +1,19 @@
+s=input()
+le=len(s)
+s=s+" "
+a=[]
+i=0
+while i<le:
+    count=1
+    if s[i]==s[i+1]:
+        j=i
+        while s[j]==s[j+1]:
+            count+=1
+            j+=1
+        a.append((count,int(s[i])))
+        
+    else:
+        a.append((1,int(s[i])))
+    i+=count
+for i in a:
+    print(i,end=" ")
