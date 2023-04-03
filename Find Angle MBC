@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a,b=int(input()),int(input())
+import math
+angle=math.atan(a/b)
+print(str(round(math.degrees(angle)))+'\xb0')
