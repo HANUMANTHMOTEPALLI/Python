@@ -1,0 +1,12 @@
+from collections import Counter as co
+n=int(input())
+num_shoes=list(map(int,input().split()))
+num_cus=int(input())
+a=co(num_shoes)
+money=0
+for i in range(num_cus):
+    l,k=list(map(int,input().split()))
+    if l in a.keys() and a[l]>0:
+            a[l]-=1
+            money+=k
+print(money)
