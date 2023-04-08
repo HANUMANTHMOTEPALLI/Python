@@ -1,0 +1,23 @@
+def merge_the_tools(string, k):
+    a=[]
+    n1=0
+    n2=k
+    m=1
+    for i in range(int(len(string)/k)+1):
+        a.append(string[n1:n2])
+        n1=n2
+        m+=1
+        n2=k*(m)
+    for j in a:
+        if j=="":
+            a.remove(j)
+    #print(a)
+    b=[]
+    for k in a:
+        s=''
+        for l in k:
+            if l not in s:
+                s+=l
+        b.append(s)
+    for i in b:
+        print(i)
