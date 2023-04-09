@@ -1,0 +1,48 @@
+def minion_game(string):
+    # your code goes here
+    ovels="AEIOU"
+    kevin_list=0
+    stuart_list=0
+    for i in range(len(string)):
+        if string[i] in ovels:
+            kevin_list+=len(string)-i
+        else:
+            stuart_list+=len(string)-i
+    """print(kevin_list)
+    print(stuart_list)"""
+    if kevin_list>stuart_list:
+        print(f"Kevin {kevin_list}")
+    elif kevin_list<stuart_list:
+        print(f"Stuart {stuart_list}")
+    else:
+        print("Draw")
+        
+        
+"""
+!!!!!!!!!time complexity is high!!!!!!!!!!       
+
+def minion_game(string):
+    # your code goes here
+    ovels="AEIOU"
+    kevin_list=0
+    stuart_list=0
+    for i in range(len(string)):
+        if string[i] in ovels:
+            for j in range(len(string)+1):
+                if string[i:j] !="":
+                    #kevin_list.append(string[i:j])
+                    kevin_list+=1
+        else:
+            for k in range(len(string)+1):
+                if string[i:k] !="":
+                    #stuart_list.append(string[i:k])
+                    stuart_list+=1
+    #print(kevin_list)
+    #print(stuart_list)
+    if kevin_list>stuart_list:
+        print(f"Kevin {kevin_list}")
+    elif kevin_list<stuart_list:
+        print(f"Stuart {stuart_list}")
+    else:
+        print("Draw")
+"""
