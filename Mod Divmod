@@ -1,0 +1,4 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from __future__ import division
+a,b=map(int,[input(),input()])
+print(*divmod(a,b),divmod(a,b),sep="\n")
